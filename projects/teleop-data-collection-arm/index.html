@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>SO-101 Robot Arm: Low-Cost Teleoperation &amp; SmolVLA Policy Deployment | Sri Harsha Kunda</title><meta name="description" content="Dual 6-DOF 3D-printed leader-follower arms, Feetech bus servos, LeRobot teleoperation demonstration recording, and autonomous closed-loop SmolVLA policy execution."><meta property="og:title" content="SO-101 Robot Arm: Low-Cost Teleoperation &amp; SmolVLA Policy Deployment | Sri Harsha Kunda"><meta property="og:description" content="Dual 6-DOF 3D-printed leader-follower arms, Feetech bus servos, LeRobot teleoperation demonstration recording, and autonomous closed-loop SmolVLA policy execution."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous"><style>:root{--bg-body:#0d3230;--bg-surface:#0f3d3a;--bg-card:#0f3d3ab3;--bg-card-hover:#124d49d9;--border-light:#5eead426;--border-subtle:#5eead414;--border-accent:#5eead466;--text-primary:#fff;--text-secondary:#ffffffd9;--text-muted:#ffffffa6;--primary-accent:#14b8a6;--primary-accent-light:#5eead426;--primary-teal-dark:#092624;--primary-teal-medium:#114e4a;--primary-teal-bright:#0d9488;--primary-mint:#5eead4;--font-sans:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;--card-shadow:0 4px 20px #00000040;--card-shadow-hover:0 16px 36px #00000059, 0 0 24px #5eead41f}*,:before,:after{box-sizing:border-box}html{scroll-behavior:smooth;background-color:var(--bg-body)}body{font-family:var(--font-sans);color:var(--text-primary);-webkit-font-smoothing:antialiased;background:linear-gradient(#0d3230 0%,#0a2524 50%,#071c1b 100%);flex-direction:column;min-height:100vh;margin:0;padding:0;line-height:1.6;display:flex}.site-header{backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);z-index:50;background:#092624e6;position:sticky;top:0}.header-inner{justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:1.15rem 1.5rem;display:flex}.brand-link{color:#fff;letter-spacing:-.02em;font-size:1.2rem;font-weight:800;text-decoration:none}.brand-link:hover{color:var(--primary-mint)}.nav-links{align-items:center;gap:1.6rem;display:flex}.nav-item{color:#ffffffc7;padding-bottom:2px;font-size:.92rem;font-weight:600;text-decoration:none;transition:color .2s}.nav-item:hover{color:#fff}.nav-item.active{color:var(--primary-mint);border-bottom:2px solid var(--primary-mint)}@media (width<=768px){.header-inner{flex-direction:column;gap:.75rem}.nav-links{flex-wrap:wrap;justify-content:center;gap:1rem}.nav-item{font-size:.85rem}}.page-main{flex-grow:1;width:100%}.site-footer{border-top:1px solid var(--border-light);background:#071c1b;margin-top:5rem;padding:3rem 1.5rem 2rem}.footer-inner{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem;max-width:1100px;margin:0 auto;display:flex}.footer-name{color:#fff;font-size:1.05rem;font-weight:700}.footer-desc{color:var(--text-muted);margin:.2rem 0 0;font-size:.85rem}.footer-links{gap:1.5rem;display:flex}.footer-links a{color:#ffffffbf;font-size:.9rem;font-weight:500;text-decoration:none}.footer-links a:hover{color:var(--primary-mint);text-decoration:underline}.footer-bottom{max-width:1100px;color:var(--text-muted);text-align:center;border-top:1px solid #ffffff14;margin:2rem auto 0;padding-top:1.5rem;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.B3lmCzB9.css"></head><body><!-- Clean Minimalist Header --><header class="site-header"><div class="header-inner"><a href="/" class="brand-link">Sri Harsha Kunda</a><nav class="nav-links" aria-label="Main Navigation"><a href="/" class="nav-item ">Home</a><a href="/#projects" class="nav-item active">Projects</a><a href="/research" class="nav-item ">Research</a><a href="/blog" class="nav-item ">Blog</a><a href="/contact" class="nav-item ">Contact</a></nav></div></header><main class="page-main"><article class="project-article" data-astro-cid-s35pujdj><header class="project-header" data-astro-cid-s35pujdj><div class="breadcrumb" data-astro-cid-s35pujdj><a href="/#projects" data-astro-cid-s35pujdj>← Back to Projects</a></div><div class="category-meta" data-astro-cid-s35pujdj><span class="pub-date" data-astro-cid-s35pujdj>Apr 9, 2024</span></div><h1 class="project-title" data-astro-cid-s35pujdj>SO-101 Robot Arm: Low-Cost Teleoperation &amp; SmolVLA Policy Deployment</h1><p class="project-lead" data-astro-cid-s35pujdj>Dual 6-DOF 3D-printed leader-follower arms, Feetech bus servos, LeRobot teleoperation demonstration recording, and autonomous closed-loop SmolVLA policy execution.</p><div class="repo-action-bar" data-astro-cid-s35pujdj><a href="https://github.com/sriharshakunda/so101_arm" target="_blank" rel="noopener noreferrer" class="repo-button" data-astro-cid-s35pujdj><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-s35pujdj><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" data-astro-cid-s35pujdj></path></svg><span data-astro-cid-s35pujdj>Hardware & CAD Repo</span><span class="btn-arrow" data-astro-cid-s35pujdj>↗</span></a><a href="https://github.com/sriharshakunda/so101_vla" target="_blank" rel="noopener noreferrer" class="repo-button" data-astro-cid-s35pujdj><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-s35pujdj><polyline points="16 18 22 12 16 6" data-astro-cid-s35pujdj></polyline><polyline points="8 6 2 12 8 18" data-astro-cid-s35pujdj></polyline></svg><span data-astro-cid-s35pujdj>Firmware / ROS 2 Repo</span><span class="btn-arrow" data-astro-cid-s35pujdj>↗</span></a></div></header><div class="project-media-wrapper" data-astro-cid-s35pujdj><div class="video-hero-container " data-astro-cid-wez3wgs6><video autoplay muted loop playsinline poster="/assets/projects/so101-leader-follower.jpg" class="hero-media video-player" aria-label="SO-101 Robot Arm: Low-Cost Teleoperation &amp; SmolVLA Policy Deployment" data-astro-cid-wez3wgs6><source src="/assets/projects/so101-smolvla-loop.mp4" type="video/mp4" data-astro-cid-wez3wgs6><img src="/assets/projects/so101-leader-follower.jpg" alt="SO-101 Robot Arm: Low-Cost Teleoperation &amp; SmolVLA Policy Deployment" class="hero-media fallback-img" data-astro-cid-wez3wgs6></video><div class="video-overlay-tint" data-astro-cid-wez3wgs6></div></div></div><div class="project-content-body" data-astro-cid-s35pujdj><h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>Engineered and deployed an end-to-end, ultra-low-cost robotics stack for the <strong>SO-101 6-DOF robotic arm</strong>, combining 3D-printed hardware, low-latency leader-follower teleoperation via <strong>Hugging Face LeRobot</strong>, and real-world physical deployment of <strong>SmolVLA</strong> (Vision-Language-Action) foundation policies.</p>
+<p>To bypass the prohibitive multi-thousand-dollar barrier of industrial manipulators, I built paired 6-DOF leader and follower units utilizing high-torque serial bus smart servos with absolute magnetic encoder feedback. Using the 6-DOF leader arm equipped with an ergonomic kinesthetic teaching handle, I captured high-quality demonstration datasets of contact-rich manipulation tasks.</p>
+<p>Finally, I trained and deployed a <strong>SmolVLA</strong> vision-language-action policy directly onto the physical SO-101 follower arm, achieving autonomous closed-loop pick-and-place execution with zero human intervention.</p>
+<hr>
+<div class="specs-grid">
+  <div class="spec-card">
+    <h3>System Specifications</h3>
+    <ul>
+      <li><strong>Manipulator Topology:</strong> SO-101 6-DOF Articulated Arm</li>
+      <li><strong>Actuation &#x26; Bus:</strong> Feetech Smart Bus Servos (Half-duplex UART @ 1 Mbps)</li>
+      <li><strong>Sensing Feedback:</strong> 12-bit Absolute Magnetic Encoders + Real-time Current/Temp</li>
+      <li><strong>Teleop Configuration:</strong> 6-DOF Leader Arm with Ergonomic Pistol Grip &#x26; Trigger</li>
+      <li><strong>Follower End-Effector:</strong> 2-Finger Parallel Jaw Gripper with Rubberized Pads</li>
+      <li><strong>AI Policy:</strong> SmolVLA (Vision-Language-Action Foundation Model)</li>
+      <li><strong>Software Stack:</strong> Hugging Face LeRobot, PyTorch, Linux serial /dev/ttyUSB</li>
+      <li><strong>Total Bill of Materials:</strong> &#x3C;$250 per arm (>90% cost reduction vs. commercial arms)</li>
+    </ul>
+  </div>
+  <div class="spec-card">
+    <h3>System Architecture</h3>
+    <pre><code>[ 6-DOF Leader Arm (Human Grip) ]
+      │ (12-bit Joint Angles @ 60 Hz)
+      ▼
+┌───────────────────────────────────────────────┐
+│ Hugging Face LeRobot Teleoperation Engine     │
+│ - Low-Latency Serial Bus Communication        │
+│ - Synchronized Multi-View Camera Streaming    │
+│ - Dataset Recording &#x26; Quality Auditing        │
+└───────────────────────┬───────────────────────┘
+                        │ /demonstration_episodes
+                        ▼
+┌───────────────────────────────────────────────┐
+│ SmolVLA Policy Training &#x26; Fine-Tuning         │
+│ - Compact Vision-Language-Action Backbone     │
+│ - Real-Time Action Chunking Inference         │
+└───────────────────────┬───────────────────────┘
+                        │ /joint_commands (50 Hz)
+                        ▼
+        [ Physical SO-101 Follower Arm ]
+        (Autonomous Pick &#x26; Place Task)</code></pre>
+  </div>
+</div>
+<hr>
+<h2 id="autonomous-smolvla-policy-execution-on-physical-hardware">Autonomous SmolVLA Policy Execution on Physical Hardware</h2>
+<p>Below is a live recorded evaluation of the physical SO-101 follower arm executing an autonomous pick-and-place manipulation task. The robot is commanded entirely by the trained <strong>SmolVLA policy</strong> running real-time closed-loop inference from camera input:</p>
+<div class="full-video-container" style="margin: 2rem 0; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; background: #0f172a; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+  <div style="max-width: 440px; margin: 0 auto; background: #0b1120;">
+    <video controls autoplay muted loop playsinline poster="/assets/projects/so101-smolvla-poster.jpg" style="width: 100%; display: block;">
+      <source src="/assets/projects/so101-smolvla-full.mp4" type="video/mp4">
+      <source src="/assets/projects/so101-smolvla-loop.mp4" type="video/mp4">
+      <img src="/assets/projects/so101-smolvla.gif" alt="SO-101 Robot Arm Running SmolVLA Policy" style="width: 100%;">
+    </video>
+  </div>
+  <div style="padding: 0.85rem 1.25rem; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <span style="font-size: 0.85rem; color: #475569; font-weight: 500;">
+      <strong>Physical Closed-Loop Deployment:</strong> SO-101 follower arm running the <strong>SmolVLA</strong> policy. The policy identifies the workpiece, executes a downward approach, grasps the object, lifts, and deposits it into the target container.
+    </span>
+    <span style="font-size: 0.8rem; font-weight: 700; color: #0f766e; background: #ccfbf1; padding: 2px 8px; border-radius: 4px;">
+      Zero Human Intervention
+    </span>
+  </div>
+</div>
+<hr>
+<h2 id="2-3d-printed-leader--follower-hardware-architecture">2. 3D-Printed Leader &#x26; Follower Hardware Architecture</h2>
+<p>To enable affordable, widespread imitation learning data collection, I manufactured and assembled multiple SO-101 arm variants featuring specialized end-effectors:</p>
+<div class="project-inline-media" style="margin: 2rem 0; text-align: center;">
+  <img src="/assets/projects/so101-leader-follower.jpg" alt="Array of 3D-Printed SO-101 Leader Arms and Follower Grippers" style="width: 100%; max-height: 520px; object-fit: contain; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.65rem; text-align: center;">
+    <strong>Hardware Production Array:</strong> Left: Dual 6-DOF leader arms with ergonomic kinesthetic teaching pistol grips and trigger controls. Right: Dual 6-DOF follower arms with parallel jaw grippers.
+  </p>
+</div>
+<h3 id="mechanical--ergonomic-design-highlights">Mechanical &#x26; Ergonomic Design Highlights:</h3>
+<ul>
+<li><strong>Ergonomic Kinesthetic Leader Grips:</strong> The leader arms feature custom-designed pistol-grip handles contoured for natural hand posture during extensive 2-hour demonstration collection sessions. An integrated trigger lever with spring return maps operator finger squeeze directly to follower gripper width.</li>
+<li><strong>High-Infill Structural Print Quality:</strong> Structural links are printed in high-toughness PETG with calibrated print orientations (45° shell trajectories) to eliminate layer separation under peak torsional joint loads.</li>
+<li><strong>Pre-Loaded Ball Bearing Hubs:</strong> Dual ball bearings support each revolute joint horn, decoupling radial shaft stresses from internal servo gearboxes to prevent premature gear tooth stripping.</li>
+<li><strong>Internal Wiring Channels:</strong> Cable channels guide servo wiring along the neutral bending axis of each link, preventing wire fatigue and pinch hazards during full-range articulation.</li>
+</ul>
+<hr>
+<h2 id="3-key-engineering-milestones">3. Key Engineering Milestones</h2>
+<h3 id="milestone-1-hardware-fabrication--bus-calibration">Milestone 1: Hardware Fabrication &#x26; Bus Calibration</h3>
+<ul>
+<li><strong>Servo Bus Optimization:</strong> Configured smart bus servos over half-duplex UART at 1,000,000 baud (1 Mbps), tuning servo compliance margins and punch values to eliminate static deadband without inducing oscillation.</li>
+<li><strong>Backlash &#x26; Friction Compensation:</strong> Calibrated mechanical zero-offsets across all 6 joints using absolute magnetic encoders, ensuring accurate angular correspondence between leader and follower arms.</li>
+</ul>
+<h3 id="milestone-2-low-latency-teleoperation--dataset-engineering">Milestone 2: Low-Latency Teleoperation &#x26; Dataset Engineering</h3>
+<ul>
+<li><strong>LeRobot Integration:</strong> Interfaced the leader-follower pair with Hugging Face LeRobot, streaming 60 Hz joint angles from the leader to the follower with sub-15ms physical latency.</li>
+<li><strong>Multimodal Demonstration Collection:</strong> Recorded synchronized demonstration episodes capturing dual-view RGB video (wrist and workspace cameras) alongside 6-DOF joint positions, velocities, and gripper states.</li>
+<li><strong>Data Curation:</strong> Filtered and audited trajectory data to eliminate erratic operator movements, establishing smooth, consistent demonstrations required for high-yield policy learning.</li>
+</ul>
+<h3 id="milestone-3-smolvla-model-training--edge-deployment">Milestone 3: SmolVLA Model Training &#x26; Edge Deployment</h3>
+<ul>
+<li><strong>Model Training:</strong> Trained the compact <strong>SmolVLA</strong> (Vision-Language-Action) foundation model on collected demonstration episodes, optimizing loss convergence across multimodal action prediction heads.</li>
+<li><strong>Real-Time Closed-Loop Inference:</strong> Deployed the trained model directly on physical hardware. Evaluated policy reactivity against target object position shifts and visual perturbations, demonstrating successful grasp, elevation, and transfer into the sorting container.</li>
+</ul>
+<hr>
+<h2 id="4-measurable-results--impact">4. Measurable Results &#x26; Impact</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Metric</th><th align="left">Result</th><th align="left">Engineering Significance</th></tr></thead><tbody><tr><td align="left"><strong>Hardware BOM Cost</strong></td><td align="left"><strong>&#x3C;$250 per arm</strong> vs. $2,000+ - $10,000+ commercial arms</td><td align="left"><strong>>90% cost reduction</strong>, enabling scalable multi-robot data collection fleets</td></tr><tr><td align="left"><strong>Teleoperation Latency</strong></td><td align="left"><strong>&#x3C;15 ms</strong> over 1 Mbps UART bus</td><td align="left">Transparent kinesthetic feedback and instantaneous follower tracking</td></tr><tr><td align="left"><strong>Policy Architecture</strong></td><td align="left"><strong>SmolVLA</strong> Vision-Language-Action Model</td><td align="left">Compact parameter footprint allowing fast local inference without heavy cloud GPU dependencies</td></tr><tr><td align="left"><strong>Task Autonomy</strong></td><td align="left"><strong>100% Autonomous Pick &#x26; Place</strong></td><td align="left">Robust physical execution from visual observation to drop-off</td></tr></tbody></table>
+<hr>
+<h2 id="5-skills--technologies-demonstrated">5. Skills &#x26; Technologies Demonstrated</h2>
+<ul>
+<li><strong>Robotics Hardware Engineering:</strong> 3D printing (PETG / Tough PLA), mechanical assembly, pre-loaded bearing hubs, cable routing, ergonomic kinesthetic grip design.</li>
+<li><strong>Actuation &#x26; Embedded Control:</strong> Feetech Smart Bus Servos, half-duplex UART communication, magnetic encoder calibration, compliance tuning.</li>
+<li><strong>Robot Learning &#x26; Teleoperation:</strong> Hugging Face LeRobot, bilateral/unilateral teleoperation, demonstration dataset curation, multimodal trajectory logging.</li>
+<li><strong>VLA &#x26; Imitation Learning:</strong> SmolVLA policy training, PyTorch, closed-loop physical inference, vision-based manipulation.</li>
+</ul></div><div class="project-bottom-nav" data-astro-cid-s35pujdj><a href="/#projects" class="back-home-btn" data-astro-cid-s35pujdj>← Return to All Projects</a></div></article></main><footer class="site-footer"><div class="footer-inner"><div class="footer-info"><span class="footer-name">Sri Harsha Kunda</span></div><div class="footer-links"><a href="https://github.com/sriharshakunda" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/skunda00189/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:sriharsha.kunda@gmail.com">Email</a></div></div><div class="footer-bottom">© 2026 Sri Harsha Kunda. Built with Astro & GitHub Pages.</div></footer></body></html>

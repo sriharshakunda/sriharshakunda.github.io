@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="100%" stop-color="#292524" />
+    </linearGradient>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg5)" />
+  <rect width="800" height="450" fill="url(#grid5)" />
+  
+  <g transform="translate(180, 50)">
+    <!-- Base fixture plate -->
+    <rect x="60" y="210" width="340" height="40" rx="4" fill="#44403c" stroke="#f97316" stroke-width="2"/>
+    <circle cx="100" cy="230" r="8" fill="#1c1917" stroke="#f97316" stroke-width="2"/>
+    <circle cx="360" cy="230" r="8" fill="#1c1917" stroke="#f97316" stroke-width="2"/>
+
+    <!-- Machined workpiece block -->
+    <polygon points="120,210 180,100 300,100 340,210" fill="#292524" stroke="#fb923c" stroke-width="3"/>
+    
+    <!-- Measurement / Pointcloud overlay -->
+    <line x1="180" y1="100" x2="300" y2="100" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+    <circle cx="180" cy="100" r="4" fill="#38bdf8"/>
+    <circle cx="240" cy="100" r="4" fill="#38bdf8"/>
+    <circle cx="300" cy="100" r="4" fill="#38bdf8"/>
+
+    <!-- Center bore -->
+    <circle cx="240" cy="155" r="24" fill="#1c1917" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3"/>
+    <line x1="240" y1="120" x2="240" y2="190" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2"/>
+    <line x1="205" y1="155" x2="275" y2="155" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="50" y="380" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#f8fafc">Reverse Engineering Fixtures & Metrology</text>
+  <text x="50" y="410" font-family="system-ui, sans-serif" font-size="16" fill="#94a3b8">Structured-Light Scanning • GD&T H7-g6 Fits • Precision Metrology</text>
+  <rect x="700" y="30" width="70" height="24" rx="4" fill="rgba(249, 115, 22, 0.2)" stroke="#f97316" stroke-width="1"/>
+  <text x="735" y="46" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#fb923c" text-anchor="middle">TOOLING</text>
+</svg>
+

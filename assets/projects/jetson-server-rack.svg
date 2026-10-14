@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181326" />
+      <stop offset="100%" stop-color="#2a1f42" />
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg4)" />
+  <rect width="800" height="450" fill="url(#grid4)" />
+  
+  <g transform="translate(160, 50)">
+    <!-- 4U Rack Frame -->
+    <rect x="50" y="30" width="380" height="240" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="3"/>
+    
+    <!-- Sled 1 -->
+    <rect x="70" y="50" width="340" height="55" rx="4" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="100" cy="77" r="16" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+    <text x="130" y="82" font-family="monospace" font-size="14" fill="#cbd5e1">NODE 01: JETSON AGX ORIN (64GB)</text>
+    <circle cx="380" cy="77" r="6" fill="#22c55e"/>
+
+    <!-- Sled 2 -->
+    <rect x="70" y="120" width="340" height="55" rx="4" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="100" cy="147" r="16" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+    <text x="130" y="152" font-family="monospace" font-size="14" fill="#cbd5e1">NODE 02: JETSON AGX ORIN (64GB)</text>
+    <circle cx="380" cy="147" r="6" fill="#22c55e"/>
+
+    <!-- Sled 3 -->
+    <rect x="70" y="190" width="340" height="55" rx="4" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="100" cy="217" r="16" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+    <text x="130" y="222" font-family="monospace" font-size="14" fill="#cbd5e1">NODE 03: JETSON AGX ORIN (64GB)</text>
+    <circle cx="380" cy="217" r="6" fill="#22c55e"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="50" y="380" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#f8fafc">Autonomous Edge Jetson Server Rack</text>
+  <text x="50" y="410" font-family="system-ui, sans-serif" font-size="16" fill="#94a3b8">4U Half-Depth Enclosure • 3x Jetson AGX Orin • 18-36V Isolated DC-DC Bus</text>
+  <rect x="680" y="30" width="90" height="24" rx="4" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="725" y="46" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#c084fc" text-anchor="middle">MECHANICAL</text>
+</svg>
+

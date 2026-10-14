@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>CAD to URDF Pipeline: Assembling SO-101 in Onshape &amp; Simulation Export | Sri Harsha Kunda</title><meta name="description" content="A hands-on engineering walkthrough transforming raw STEP CAD files into a validated, simulation-ready ROS URDF: assembling the SO-101 manipulator in Onshape and verifying joint kinematics in WebGL URDF Viewer."><meta property="og:title" content="CAD to URDF Pipeline: Assembling SO-101 in Onshape &amp; Simulation Export | Sri Harsha Kunda"><meta property="og:description" content="A hands-on engineering walkthrough transforming raw STEP CAD files into a validated, simulation-ready ROS URDF: assembling the SO-101 manipulator in Onshape and verifying joint kinematics in WebGL URDF Viewer."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous"><style>:root{--bg-body:#0d3230;--bg-surface:#0f3d3a;--bg-card:#0f3d3ab3;--bg-card-hover:#124d49d9;--border-light:#5eead426;--border-subtle:#5eead414;--border-accent:#5eead466;--text-primary:#fff;--text-secondary:#ffffffd9;--text-muted:#ffffffa6;--primary-accent:#14b8a6;--primary-accent-light:#5eead426;--primary-teal-dark:#092624;--primary-teal-medium:#114e4a;--primary-teal-bright:#0d9488;--primary-mint:#5eead4;--font-sans:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;--card-shadow:0 4px 20px #00000040;--card-shadow-hover:0 16px 36px #00000059, 0 0 24px #5eead41f}*,:before,:after{box-sizing:border-box}html{scroll-behavior:smooth;background-color:var(--bg-body)}body{font-family:var(--font-sans);color:var(--text-primary);-webkit-font-smoothing:antialiased;background:linear-gradient(#0d3230 0%,#0a2524 50%,#071c1b 100%);flex-direction:column;min-height:100vh;margin:0;padding:0;line-height:1.6;display:flex}.site-header{backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);z-index:50;background:#092624e6;position:sticky;top:0}.header-inner{justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:1.15rem 1.5rem;display:flex}.brand-link{color:#fff;letter-spacing:-.02em;font-size:1.2rem;font-weight:800;text-decoration:none}.brand-link:hover{color:var(--primary-mint)}.nav-links{align-items:center;gap:1.6rem;display:flex}.nav-item{color:#ffffffc7;padding-bottom:2px;font-size:.92rem;font-weight:600;text-decoration:none;transition:color .2s}.nav-item:hover{color:#fff}.nav-item.active{color:var(--primary-mint);border-bottom:2px solid var(--primary-mint)}@media (width<=768px){.header-inner{flex-direction:column;gap:.75rem}.nav-links{flex-wrap:wrap;justify-content:center;gap:1rem}.nav-item{font-size:.85rem}}.page-main{flex-grow:1;width:100%}.site-footer{border-top:1px solid var(--border-light);background:#071c1b;margin-top:5rem;padding:3rem 1.5rem 2rem}.footer-inner{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem;max-width:1100px;margin:0 auto;display:flex}.footer-name{color:#fff;font-size:1.05rem;font-weight:700}.footer-desc{color:var(--text-muted);margin:.2rem 0 0;font-size:.85rem}.footer-links{gap:1.5rem;display:flex}.footer-links a{color:#ffffffbf;font-size:.9rem;font-weight:500;text-decoration:none}.footer-links a:hover{color:var(--primary-mint);text-decoration:underline}.footer-bottom{max-width:1100px;color:var(--text-muted);text-align:center;border-top:1px solid #ffffff14;margin:2rem auto 0;padding-top:1.5rem;font-size:.78rem}
+</style><link rel="stylesheet" href="/_astro/_slug_.B3lmCzB9.css"></head><body><!-- Clean Minimalist Header --><header class="site-header"><div class="header-inner"><a href="/" class="brand-link">Sri Harsha Kunda</a><nav class="nav-links" aria-label="Main Navigation"><a href="/" class="nav-item ">Home</a><a href="/#projects" class="nav-item active">Projects</a><a href="/research" class="nav-item ">Research</a><a href="/blog" class="nav-item ">Blog</a><a href="/contact" class="nav-item ">Contact</a></nav></div></header><main class="page-main"><article class="project-article" data-astro-cid-s35pujdj><header class="project-header" data-astro-cid-s35pujdj><div class="breadcrumb" data-astro-cid-s35pujdj><a href="/#projects" data-astro-cid-s35pujdj>← Back to Projects</a></div><div class="category-meta" data-astro-cid-s35pujdj><span class="pub-date" data-astro-cid-s35pujdj>May 19, 2024</span></div><h1 class="project-title" data-astro-cid-s35pujdj>CAD to URDF Pipeline: Assembling SO-101 in Onshape &amp; Simulation Export</h1><p class="project-lead" data-astro-cid-s35pujdj>A hands-on engineering walkthrough transforming raw STEP CAD files into a validated, simulation-ready ROS URDF: assembling the SO-101 manipulator in Onshape and verifying joint kinematics in WebGL URDF Viewer.</p><div class="repo-action-bar" data-astro-cid-s35pujdj><a href="https://github.com/TheRobotStudio/SO-ARM100/tree/main/STEP/SO101" target="_blank" rel="noopener noreferrer" class="repo-button" data-astro-cid-s35pujdj><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-s35pujdj><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" data-astro-cid-s35pujdj></path></svg><span data-astro-cid-s35pujdj>Hardware & CAD Repo</span><span class="btn-arrow" data-astro-cid-s35pujdj>↗</span></a></div></header><div class="project-media-wrapper" data-astro-cid-s35pujdj><div class="video-hero-container " data-astro-cid-wez3wgs6><video autoplay muted loop playsinline poster="/assets/projects/cad-urdf-verification.png" class="hero-media video-player" aria-label="CAD to URDF Pipeline: Assembling SO-101 in Onshape &amp; Simulation Export" data-astro-cid-wez3wgs6><source src="/assets/projects/so101-urdf-viewer-loop.mp4" type="video/mp4" data-astro-cid-wez3wgs6><img src="/assets/projects/cad-urdf-verification.png" alt="CAD to URDF Pipeline: Assembling SO-101 in Onshape &amp; Simulation Export" class="hero-media fallback-img" data-astro-cid-wez3wgs6></video><div class="video-overlay-tint" data-astro-cid-wez3wgs6></div></div></div><div class="project-content-body" data-astro-cid-s35pujdj><h2 id="1-project-overview">1. Project Overview</h2>
+<p>Bridging mechanical CAD and robotics simulation requires translating static 3D geometry into a kinematically constrained robot description format (<strong>URDF</strong>). Without accurate joint axes, origin frames, and limit definitions, downstream ROS 2 control nodes, MoveIt motion planners, and MuJoCo/Isaac Sim digital twins cannot function.</p>
+<p>This project was built as a focused, practical engineering showcase demonstrating how to take open-source mechanical CAD parts from <strong>The Robot Studio (SO-101)</strong>, assemble the complete kinematic chain using mates in <strong>Onshape</strong>, export a clean ROS-compatible URDF package, and validate joint articulation using the <a href="https://viewer.robotsfan.com/">RobotsFan URDF Viewer</a>.</p>
+<hr>
+<div class="specs-grid">
+  <div class="spec-card">
+    <h3>Toolchain &#x26; Pipeline Specifications</h3>
+    <ul>
+      <li><strong>Source CAD Files:</strong> <a href="https://github.com/TheRobotStudio/SO-ARM100/tree/main/STEP/SO101" target="_blank" rel="noopener noreferrer" style="color: #0f766e; text-decoration: underline;">SO-101 STEP Files (The Robot Studio)</a></li>
+      <li><strong>CAD Software:</strong> Onshape Cloud CAD (Parametric Assembly &#x26; Mates)</li>
+      <li><strong>Exporter Tool:</strong> Onshape-to-URDF Exporter Plugin</li>
+      <li><strong>Target Robot Format:</strong> ROS / ROS 2 Unified Robot Description Format (URDF)</li>
+      <li><strong>Kinematic Tree:</strong> 6 Revolute Joints + 1 Prismatic/Revolute Gripper</li>
+      <li><strong>Verification Platform:</strong> <a href="https://viewer.robotsfan.com/" target="_blank" rel="noopener noreferrer" style="color: #0f766e; text-decoration: underline;">RobotsFan WebGL URDF Viewer</a></li>
+    </ul>
+  </div>
+  <div class="spec-card">
+    <h3>Engineering Workflow</h3>
+    <pre><code>[ Raw STEP CAD Files (SO-101) ]
+              │
+              ▼
+┌───────────────────────────────────────────────┐
+│ Onshape Assembly Modeling                     │
+│ - Import Individual Component Geometry        │
+│ - Define Rigid Sub-Assemblies                 │
+│ - Assign Revolute Mates &#x26; Joint Z-Axes        │
+│ - Set Joint Travel Limits (Min / Max Deg)     │
+└───────────────────────┬───────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────┐
+│ URDF Package Generation                       │
+│ - Export Visual &#x26; Collision Meshes (.STL)     │
+│ - Calculate Inertial Tensors &#x26; Masses         │
+│ - Standardize ROS Tree Directory Structure    │
+└───────────────────────┬───────────────────────┘
+                        │
+                        ▼
+┌───────────────────────────────────────────────┐
+│ WebGL URDF Viewer Kinematic Verification      │
+│ - Validate Axis Directions &#x26; Zero Offsets     │
+│ - Test Full Joint Trajectory Articulation     │
+└───────────────────────────────────────────────┘</code></pre>
+  </div>
+</div>
+<hr>
+<h2 id="2-interactive-kinematic-verification-urdf-viewer-demo">2. Interactive Kinematic Verification (URDF Viewer Demo)</h2>
+<p>The live screen recording below demonstrates testing the exported SO-101 URDF inside the WebGL viewer. Each joint slider articulates the corresponding link across its calibrated angular limits without coordinate frame flipping, mesh detachment, or inverted rotation:</p>
+<div class="full-video-container" style="margin: 2rem 0; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; background: #0f172a; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+  <video controls autoplay muted loop playsinline poster="/assets/projects/so101-urdf-viewer-poster.jpg" style="width: 100%; display: block;">
+    <source src="/assets/projects/so101-urdf-viewer-full.mp4" type="video/mp4">
+    <source src="/assets/projects/so101-urdf-viewer-loop.mp4" type="video/mp4">
+    <img src="/assets/projects/so101-urdf-viewer.gif" alt="SO-101 URDF Joint Verification Demo" style="width: 100%;">
+  </video>
+  <div style="padding: 0.85rem 1.25rem; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <span style="font-size: 0.85rem; color: #475569; font-weight: 500;">
+      <strong>URDF Motion Verification:</strong> Testing individual joint degrees of freedom in <a href="https://viewer.robotsfan.com/" target="_blank" rel="noopener noreferrer" style="color: #0f766e; text-decoration: underline; font-weight: 600;">RobotsFan URDF Viewer</a>.
+    </span>
+    <span style="font-size: 0.8rem; font-weight: 700; color: #0f766e; background: #ccfbf1; padding: 2px 8px; border-radius: 4px;">
+      Verified Clean Kinematics
+    </span>
+  </div>
+</div>
+<hr>
+<h2 id="3-step-by-step-technical-implementation">3. Step-by-Step Technical Implementation</h2>
+<h3 id="step-1-step-import--component-organization-in-onshape">Step 1: STEP Import &#x26; Component Organization in Onshape</h3>
+<p>Individual parts from the <a href="https://github.com/TheRobotStudio/SO-ARM100/tree/main/STEP/SO101">SO-ARM100 / SO-101 repository</a> were imported into Onshape Part Studios. Hardware fasteners, smart bus servos, and 3D printed brackets were grouped into discrete logical links (Base, Shoulder Pan, Shoulder Pitch, Elbow Pitch, Wrist Pitch, Wrist Roll, and Moving Jaw Gripper).</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="/assets/projects/cad-urdf-import.png" alt="Onshape STEP File Import and Component Tree" style="width: 100%; max-height: 480px; object-fit: contain; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
+    <strong>Figure 1:</strong> Initial STEP import of SO-101 components into Onshape before mate assembly.
+  </p>
+</div>
+<h3 id="step-2-defining-kinematic-mates--joint-coordinate-frames">Step 2: Defining Kinematic Mates &#x26; Joint Coordinate Frames</h3>
+<p>In Onshape, a robot kinematic chain is built using <strong>Revolute Mates</strong> and <strong>Fastened Mates</strong>:</p>
+<ul>
+<li><strong>Z-Axis Alignment:</strong> ROS standards mandate that a revolute joint’s rotation occurs about its local <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">Z</span></span></span></span>-axis. Mates were placed at the exact rotational centerlines of the servo horn bearings with the mate connector’s <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">Z</span></span></span></span>-axis pointing along the actuation axis.</li>
+<li><strong>Fastened Sub-Assemblies:</strong> Servos, motor brackets, and bearing retaining plates were rigidly fastened to their respective parent link bodies to merge them into single rigid bodies for the exporter.</li>
+<li><strong>Joint Limits:</strong> Physical travel limits (matching the Feetech STS servo rotation ranges) were directly assigned in Onshape mate limits to prevent mechanical collision during simulation.</li>
+</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="/assets/projects/cad-urdf-assembly.png" alt="Onshape Kinematic Assembly with Revolute Mates" style="width: 100%; max-height: 480px; object-fit: contain; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
+    <strong>Figure 2:</strong> Fully assembled SO-101 manipulator with defined revolute mates and coordinate origin connectors.
+  </p>
+</div>
+<h3 id="step-3-urdf-package-export">Step 3: URDF Package Export</h3>
+<p>Using the Onshape URDF exporter extension, the assembly tree was processed into a standard ROS package structure:</p>
+<ul>
+<li><strong><code>urdf/so_arm101.urdf</code>:</strong> Contains XML tags specifying parent/child link hierarchies, origin translations, rotational vectors, and limit tags.</li>
+<li><strong><code>meshes/</code>:</strong> Generated triangulated surface meshes (<code>.stl</code>) for both high-fidelity visual rendering and simplified collision boundaries.</li>
+<li><strong><code>launch/</code>:</strong> Standard display launch script for visualization.</li>
+</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="/assets/projects/cad-urdf-export.png" alt="Onshape URDF Exporter Interface" style="width: 100%; max-height: 480px; object-fit: contain; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
+    <strong>Figure 3:</strong> Configuring link names, mesh export parameters, and downloading the completed URDF package.
+  </p>
+</div>
+<h3 id="step-4-webgl-viewer-verification">Step 4: WebGL Viewer Verification</h3>
+<p>The generated package was uploaded to <a href="https://viewer.robotsfan.com/">RobotsFan URDF Viewer</a> to perform interactive validation:</p>
+<ul>
+<li>Checked for detached child meshes (a common CAD-to-URDF error caused by unfastened sub-parts).</li>
+<li>Checked joint origin offsets and confirmed zero-angle default pose.</li>
+<li>Dynamically swept each joint through its full range of motion.</li>
+</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="/assets/projects/cad-urdf-verification.png" alt="RobotsFan URDF Viewer Verification Screen" style="width: 100%; max-height: 480px; object-fit: contain; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+  <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">
+    <strong>Figure 4:</strong> Visual verification in RobotsFan URDF Viewer showing active joint sliders and aligned collision envelopes.
+  </p>
+</div>
+<hr>
+<h2 id="4-key-takeaways--engineering-significance">4. Key Takeaways &#x26; Engineering Significance</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Challenge</th><th align="left">Engineering Solution</th><th align="left">Outcome</th></tr></thead><tbody><tr><td align="left"><strong>Inverted Joint Axes</strong></td><td align="left">Explicit mate connector <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">Z</span></span></span></span>-axis reorientation in Onshape</td><td align="left">Follows standard right-hand rule across all 6 degrees of freedom</td></tr><tr><td align="left"><strong>Mesh Center Discrepancies</strong></td><td align="left">Origin placement at rotational centers rather than bounding box centroids</td><td align="left">Accurate forward and inverse kinematics calculations</td></tr><tr><td align="left"><strong>Unconstrained Parts</strong></td><td align="left">Rigid fastening of motors, screws, and clips into consolidated link bodies</td><td align="left">Clean 7-link URDF tree with zero dangling orphan components</td></tr><tr><td align="left"><strong>Toolchain Interoperability</strong></td><td align="left">Standardized package structure compatible with RViz, MuJoCo, and Isaac Sim</td><td align="left">Seamless drop-in asset for downstream simulation and digital twin pipelines</td></tr></tbody></table></div><div class="project-bottom-nav" data-astro-cid-s35pujdj><a href="/#projects" class="back-home-btn" data-astro-cid-s35pujdj>← Return to All Projects</a></div></article></main><footer class="site-footer"><div class="footer-inner"><div class="footer-info"><span class="footer-name">Sri Harsha Kunda</span></div><div class="footer-links"><a href="https://github.com/sriharshakunda" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/skunda00189/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:sriharsha.kunda@gmail.com">Email</a></div></div><div class="footer-bottom">© 2026 Sri Harsha Kunda. Built with Astro & GitHub Pages.</div></footer></body></html>

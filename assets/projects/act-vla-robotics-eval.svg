@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#162238" />
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+  
+  <g transform="translate(100, 80)">
+    <!-- Arm base -->
+    <rect x="180" y="240" width="140" height="24" rx="4" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <!-- Link 1 -->
+    <path d="M 230 240 L 230 160" stroke="#0284c7" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="230" cy="160" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Link 2 -->
+    <path d="M 230 160 L 350 100" stroke="#0284c7" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="350" cy="100" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Link 3 Wrist -->
+    <path d="M 350 100 L 440 140" stroke="#0ea5e9" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="440" cy="140" r="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <!-- Gripper -->
+    <path d="M 440 140 L 480 140 M 480 125 L 480 155 M 480 125 L 505 130 M 480 155 L 505 150" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" fill="none"/>
+    
+    <!-- Vision Cone -->
+    <polygon points="460,50 420,180 520,180" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.4)" stroke-dasharray="4"/>
+    <rect x="445" y="35" width="30" height="15" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="460" cy="42" r="4" fill="#22c55e"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="50" y="380" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#f8fafc">ACT / VLA Robotics Policy Evaluation Cell</text>
+  <text x="50" y="410" font-family="system-ui, sans-serif" font-size="16" fill="#94a3b8">AgileX Piper 6-DOF • Intel RealSense D435i • 50Hz ROS 2 Deterministic Control</text>
+  <rect x="710" y="30" width="60" height="24" rx="4" fill="rgba(14, 165, 233, 0.2)" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="740" y="46" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">ROBOTICS</text>
+</svg>
+
